@@ -1,0 +1,2 @@
+9/6/22: Initial version
+9/6/22: Made massive changes to the program increasing its performance, and made it more user friendly
