@@ -1,2 +1,3 @@
 9/6/22: Initial version
 9/6/22: Made massive changes to the program increasing its performance, and made it more user friendly
+10/29/22: Add the function to reformat the file so its easier read by the program. Or you can have the option to not reformat the file, optimizations to the code.
