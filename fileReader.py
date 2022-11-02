@@ -1,20 +1,23 @@
 import time
 
-line = 0
-wordcount = 0
 file = open('text.txt', 'r')
 data = file.read()
 original = file.read()
+line = 0
+wordcount = 0
 keep = input('Do you want to keep to keep the original format (y)? Or have the program make a new line after each space (n)? (y/n)')
+
 if keep == 'y':
     print('original data kept')
 if keep == 'n':
-    data = data.replace('.', '.\n')
-    file.close()
-    file = open('text.txt', 'w')
-    file.write(' ')
-    file.write(data)
-    file.close()
+    with open('text.txt', 'r') as file:
+        data = data.replace('\n', '\b')
+        data = data.replace('.', '.\n')
+
+    with open('text.txt', 'w') as file:
+        file.write(' ')
+        file.write(data)
+        file.close()
 
 keyword = input("What word are you searching for?")
 
