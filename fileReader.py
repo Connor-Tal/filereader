@@ -2,7 +2,6 @@ import time
 
 file = open('text.txt', 'r')
 data = file.read()
-original = file.read()
 line = 0
 wordcount = 0
 keep = input('Do you want to keep to keep the original format (y)? Or have the program make a new line after each space (n)? (y/n)')
@@ -26,11 +25,10 @@ while True:
         with open('text.txt',"r") as file:
             content = file.readlines()
             if content[line].__contains__(keyword):
-                wordcount += 1
-                print(f"The word you are looking for is on line: {line + 1}")
+                wordcount, line += 1
+                print(f"The word you are looking for is on line: {line}")
                 print (f"This is the line: {content[line]}")
                 time.sleep(1)
-                line += 1
             else:    
                 line += 1
     except:
